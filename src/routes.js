@@ -11,7 +11,7 @@ const routes = [
         element: <Home />,
       },
       {
-        path: "/:slug/:id",
+        path: "/campaign/:slug/:id",
         element: <Detail />,
       },
     ],

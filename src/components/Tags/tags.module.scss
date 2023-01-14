@@ -1,6 +1,24 @@
 .tags {
-    overflow-x: scroll;
-    &__item {
-        max-width: 30px;
+  overflow-x: scroll;
+  display: flex;
+  gap: 14px;
+  &__item {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid #eceeef;
+    border-radius: 8px;
+    padding: 6px 14px 6px 6px;
+    min-width: fit-content;
+    cursor: pointer;
+    &__icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 7.2px;
     }
+    &__text {
+      margin-left: 8px;
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
 }
