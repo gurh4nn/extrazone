@@ -7,9 +7,9 @@ const Content = ({ data }) => {
     <div className={Styles.content}>
       <div className="container mobile-no-container">
         <div className={Styles.content__image}>
-          <button className={Styles.content__image__back}>
+          <Link to={'/'} className={Styles.content__image__back}>
             <Back />
-          </button>
+          </Link>
           <img
             className={Styles.content__image__img}
             src={data?.ImageUrl}
