@@ -3,7 +3,7 @@ const Card = ({ data }) => (
   <div className={Styles.card}>
     <div className={Styles.card__content}>
       <div className={Styles.card__image}>
-        <img className={Styles.card__image__img} src={data?.ImageUrl} alt="" />
+        <img className={Styles.card__image__img} src={data?.ImageUrl} alt={data?.Title} />
         <div className={Styles.card__image__brand}>
           <img src={data?.BrandIconUrl} alt="" />
         </div>
