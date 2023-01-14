@@ -7,14 +7,22 @@
   }
   -ms-overflow-style: none;
   scrollbar-width: none;
+  :global(.swiper-slide) {
+    border: 1.5px solid #eceeef;
+    border-radius: 8px;
+    padding: 6px 14px 6px 6px;
+    max-width: max-content;
+  }
   &__item {
-    display: flex;
-    align-items: center;
     border: 1.5px solid #eceeef;
     border-radius: 8px;
     padding: 6px 14px 6px 6px;
     min-width: fit-content;
     cursor: pointer;
+    & > div {
+      display: flex;
+      align-items: center;
+    }
     &__icon {
       width: 24px;
       height: 24px;

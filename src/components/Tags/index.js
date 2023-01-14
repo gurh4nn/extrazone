@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getFilteredPromotions, getPromotions } from "store/actions/promotion";
 import { getTags } from "store/actions/tags";
 import Styles from "./tags.module.scss";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const Tags = () => {
   const dispatch = useDispatch();
@@ -21,24 +22,36 @@ const Tags = () => {
   return (
     <div className="container no-right">
       <div className={Styles.tags}>
-        <div className={Styles.tags__item} onClick={() => filterPromotions()}>
-          <Search />
-          <span className={Styles.tags__item__text}>Fırsat Bul</span>
-        </div>
-        {tags.map((item, index) => (
-          <div
-            className={Styles.tags__item}
-            key={index}
-            onClick={() => filterPromotions(item.Id)}
-          >
-            <img
-              className={Styles.tags__item__icon}
-              src={item.IconUrl}
-              alt={item.Name}
-            />
-            <span className={Styles.tags__item__text}>{item.Name}</span>
-          </div>
-        ))}
+        <Swiper
+          spaceBetween={6}
+          slidesPerView={"auto"}
+          onSlideChange={() => console.log("slide change")}
+          breakpoints={{
+            768: {
+              spaceBetween: 10,
+            },
+          }}
+          className={Styles.swiper}
+        >
+          <SwiperSlide className={Styles.tags__item}>
+            <div onClick={() => filterPromotions()}>
+              <Search />
+              <span className={Styles.tags__item__text}>Fırsat Bul</span>
+            </div>
+          </SwiperSlide>
+          {tags.map((item, index) => (
+            <SwiperSlide className={Styles.tags__item}>
+              <div key={index} onClick={() => filterPromotions(item.Id)}>
+                <img
+                  className={Styles.tags__item__icon}
+                  src={item.IconUrl}
+                  alt={item.Name}
+                />
+                <span className={Styles.tags__item__text}>{item.Name}</span>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );
