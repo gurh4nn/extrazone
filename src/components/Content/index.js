@@ -1,4 +1,5 @@
 import { Back } from "elements/icons";
+import { calcDate } from "helpers/calcDate";
 import { Link } from "react-router-dom";
 import Styles from "./content.module.scss";
 
@@ -7,7 +8,7 @@ const Content = ({ data }) => {
     <div className={Styles.content}>
       <div className="container mobile-no-container">
         <div className={Styles.content__image}>
-          <Link to={'/'} className={Styles.content__image__back}>
+          <Link to={"/"} className={Styles.content__image__back}>
             <Back />
           </Link>
           <img
@@ -17,6 +18,9 @@ const Content = ({ data }) => {
           />
           <div className={Styles.content__image__brand}>
             <img src={data?.BrandIconUrl} alt="" />
+          </div>
+          <div className={Styles.content__image__date}>
+            son {calcDate(data.RemainingText)} gün
           </div>
         </div>
       </div>

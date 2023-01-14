@@ -30,6 +30,19 @@
         max-height: 54px;
       }
     }
+    &__date {
+      position: absolute;
+      right: 6px;
+      bottom: 8px;
+      background: #1d1e1c;
+      border-radius: 26px;
+      padding: 4px 8px;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 15px;
+      text-align: center;
+      color: #ffffff;
+    }
   }
   &__title {
     max-width: 80%;
