@@ -10,7 +10,7 @@ Build with <a href="https://reactjs.org/" target="_blank">React.js v18</a> & <a 
 ## 📷 Screenshot
 
 <div align="center">
-  <img alt="Demo" src="https://i.ibb.co/Pmbzwfd/image.png"/>
+  <img alt="Demo" src="https://i.ibb.co/9t9Q6tX/image.png"/>
 </div>
 <br/>
 
