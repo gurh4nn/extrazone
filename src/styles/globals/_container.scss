@@ -6,6 +6,11 @@
   &.no-right {
     padding-right: 0;
   }
+  &.mobile-no-container {
+    @media (max-width: 768px) {
+      padding: 0;
+    }
+  }
 }
 @media (min-width: 768px) {
   .container {
@@ -22,4 +27,3 @@
     width: 1170px;
   }
 }
-
