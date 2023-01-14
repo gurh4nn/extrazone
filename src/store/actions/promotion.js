@@ -12,10 +12,10 @@ export const getPromotions = () => async (dispatch) => {
   }
 };
 
-export const getPromotionDetail = () => async (dispatch) => {
+export const getPromotionDetail = (id) => async (dispatch) => {
   try {
     dispatch({ type: FETCH_START });
-    const response = await api.get("/promotions?Id=33");
+    const response = await api.get(`/promotions?Id=${id}`);
     const payload = response.data;
     dispatch({ type: GET_PROMOTION_DETAIL, payload });
     dispatch({ type: FETCH_SUCCESS });
