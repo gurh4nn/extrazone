@@ -1,0 +1,8 @@
+export const FETCH_START = 'FETCH_START';
+export const FETCH_SUCCESS = 'FETCH_SUCCESS';
+export const GET_TAGS = 'GET_TAGS';
+export const GET_PROMOTIONS = 'GET_PROMOTIONS';
+export const GET_PROMOTION_DETAIL = 'GET_PROMOTION_DETAIL';
+
+
+
