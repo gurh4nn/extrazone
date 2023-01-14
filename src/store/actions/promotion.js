@@ -11,7 +11,14 @@ export const getPromotions = () => async (dispatch) => {
     dispatch({ type: FETCH_START });
     const response = await api.get("/promotions/list?Channel=PWA");
     const payload = response.data;
-    dispatch({ type: GET_PROMOTIONS, payload });
+    if (payload.length < 2) {
+      const fillArr = Array(5).fill({
+        ...payload[0]
+      })
+      dispatch({ type: GET_PROMOTIONS, payload: fillArr });
+    } else {
+      dispatch({ type: GET_PROMOTIONS, payload });
+    }
     dispatch({ type: FETCH_SUCCESS });
   } catch (e) {
     console.log(e);

@@ -4,17 +4,12 @@ import Home from "pages/Home";
 
 const routes = [
   {
-    element: <Layout />,
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "/campaign/:slug/:id",
-        element: <Detail />,
-      },
-    ],
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/campaign/:slug/:id",
+    element: <Detail />,
   },
 ];
 

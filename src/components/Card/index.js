@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import Styles from "./card.module.scss";
 const Card = ({ data }) => (
-  <div className={Styles.card}>
+  <Link to={`/campaign/${data?.SeoName}/${data?.Id}`} className={Styles.card}>
     <div className={Styles.card__content}>
       <div className={Styles.card__image}>
         <img className={Styles.card__image__img} src={data?.ImageUrl} alt={data?.Title} />
@@ -19,7 +20,7 @@ const Card = ({ data }) => (
         Daha Daha
       </div>
     </div>
-  </div>
+  </Link>
 );
 
 export default Card;

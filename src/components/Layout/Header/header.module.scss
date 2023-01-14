@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  &__logo {
+    cursor: pointer;
+    img {
+        width: 80px;
+        height: 40px;
+    }
+  }
+  &__cta {
+    &__login {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 14px;
+      background: #f40000;
+      border-radius: 20px;
+      padding: 10px 14px;
+      color: #fff;
+    }
+    &__user {
+      background: #1d1e1c;
+      width: 40px;
+      height: 40px;
+      border-radius: 50px;
+      margin-left: 10px;
+    }
+  }
+}

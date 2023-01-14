@@ -1,4 +1,24 @@
 .slider {
-  min-height: 300px;
-  max-width: 300px;
+    margin-top: 20px;
+  .swiper {
+    min-height: 330px;
+  }
+  :global(.swiper-pagination-bullet) {
+    bottom: 0 !important;
+    width: 8px;
+    height: 8px;
+    background: #d8d8d8;
+    opacity: 1;
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+    background-color: #f40000;
+    width: 19px;
+    height: 8px;
+    border-radius: 4px;
+  }
+  .slide {
+    min-height: 300px;
+    max-width: 300px;
+  }
 }

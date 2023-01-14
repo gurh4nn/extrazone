@@ -1,3 +1,4 @@
+import { Search } from "elements/icons";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getFilteredPromotions, getPromotions } from "store/actions/promotion";
@@ -11,24 +12,17 @@ const Tags = () => {
     dispatch(getTags());
   }, []);
   const filterPromotions = async (id) => {
-    if(id) {
+    if (id) {
       dispatch(getFilteredPromotions(id));
     } else {
       dispatch(getPromotions());
     }
   };
   return (
-    <>
+    <div className="container no-right">
       <div className={Styles.tags}>
-        <div
-          className={Styles.tags__item}
-          onClick={() => filterPromotions()}
-        >
-          {/* <img
-            className={Styles.tags__item__icon}
-            src={item.IconUrl}
-            alt={item.Name}
-          /> */}
+        <div className={Styles.tags__item} onClick={() => filterPromotions()}>
+          <Search />
           <span className={Styles.tags__item__text}>Fırsat Bul</span>
         </div>
         {tags.map((item, index) => (
@@ -46,7 +40,7 @@ const Tags = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
